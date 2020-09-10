@@ -10,6 +10,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
+  // tslint:disable-next-line: typedef
   login(model: any) {
     return this.http.post(this.baseUrl + 'login', model)
     .pipe(
@@ -19,9 +20,10 @@ export class AuthService {
           localStorage.setItem('token', user.token);
         }
       })
-    )
+    );
   }
 
+  // tslint:disable-next-line: typedef
   register(model: any) {
     return this.http.post(this.baseUrl + 'register', model);
   }

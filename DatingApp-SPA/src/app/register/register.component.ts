@@ -12,9 +12,11 @@ export class RegisterComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
   }
 
+  // tslint:disable-next-line: typedef
   register() {
     this.authService.register(this.model).subscribe(() => {
       console.log('registration successful');
@@ -23,6 +25,7 @@ export class RegisterComponent implements OnInit {
     });
   }
 
+  // tslint:disable-next-line: typedef
   cancel() {
     this.cancelRegister.emit(false);
     console.log('cancelled');
